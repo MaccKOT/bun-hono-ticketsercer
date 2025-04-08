@@ -135,7 +135,7 @@ app.delete('/bookings/:id', (c) => {
   const booking = bookings[bookingIndex];
   if (!booking) {
     return c.json({ error: 'Booking not found' }, 404);
-  } // booking может быть undefined, а это ошибка в ts, поэтому используем ранний выхода
+  } // booking может быть undefined, а это ошибка в ts, поэтому используем ранний выход
 
   booking.status = 'cancelled';
 
